@@ -1,0 +1,9 @@
+  /* Hide scrollbar for WebKit browsers */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Ensure that the content is still scrollable */
+  html, body {
+    overflow: hidden;
+  }

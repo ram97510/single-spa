@@ -1,0 +1,25 @@
+
+#Div {
+    position: relative;
+    width: auto;
+    height: auto;
+    
+  }
+  
+  #myDiv {
+    /* position: absolute; */
+    width: 100%;
+    height: 100vh;
+    /* margin-left: 150px; */
+    /* margin-top: 64px */
+  }
+
+    /* Hide scrollbar for WebKit browsers */
+    ::-webkit-scrollbar {
+      display: none;
+    }
+    
+    /* Ensure that the content is still scrollable */
+    html, body {
+      overflow: hidden;
+    }

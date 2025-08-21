@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>NXT AI Data Platform</title>
+  <link rel="icon" href="src\react-login\itl_logo.png" type="png">
+
+  <style type="text/css">
+
+    
+    #single-spa-application\:angular angularapp div {
+      margin-top: 0 !important;
+    }
+
+.menu_link.active {
+  background: #219EBC;
+  color: #FFF !important;
+}
+
+a:focus {
+    text-decoration: none !important;
+}
+
+
+/*------------- nxt ml-----------  */
+.flow-navbar {
+    border-top: 2px solid #219EBC !important;
+    margin-left: -28px !important;
+}
+.navbar-brand {
+    display: none !important;
+}
+.flow-cell.flow-cell-selected {
+    border-color: #219EBC !important;
+}
+.flow-cell .flow-cell-type {
+  background-color: #219EBC !important;
+  color: #ffffff !important;
+}
+.flow-sidebar .flow-sidebar-header .flow-tabs {
+    border-bottom: 1px solid #219EBC !important;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    background-color: #219EBC !important;
+    color: #ffffff !important;
+}
+.flow-sidebar .flow-sidebar-header .flow-tab.active {
+    color: #ffffff !important;
+    background: #219EBC !important;
+}
+.flow-clipboard td span.active, .flow-outline td span.active {
+  background-color: #219EBC !important;
+    color: #fff;
+}
+.flow-clipboard td span, .flow-outline td span {
+  background-color: #219EBC !important;
+  color: #ffffff !important;
+}
+.flow-cell .flow-cell-code textarea {
+  border-left: 2px solid #219EBC !important;
+}
+.dropdown-menu > li > a:hover{
+  background-color: #219EBC !important;
+  color: #ffffff !important;
+}
+
+.flow-box .flow-box-header {
+  margin-left: -23px !important;
+}
+.flow-box {
+  margin-left: -20px !important;
+}
+.flow-titlebar span {
+  font-family: system-ui !important;
+}
+
+/* Hide scrollbar for WebKit browsers */
+/* ::-webkit-scrollbar {
+  display: none;
+} */
+
+/* Ensure that the content is still scrollable */
+/* html, body {
+  overflow: hidden;
+} */
+
+.emotion-m4dve5 {
+  width: auto !important;
+}
+
+.SidebarContent-module__SidebarContentMain___Mgg6z{
+  overflow-x: hidden !important;
+}
+
+.emotion-1mqhnoc{
+  overflow-x: hidden !important;
+}
+/* .emotion-1mqhnoc{
+  padding-right: 50px;
+} */
+.index__wrapper___DLaLX{
+  width: 90% !important;
+}
+
+#splash {
+  display: none !important;
+}
+
+.lm-Menu {
+    top: 0 !important;
+}
+.jp-Dialog {
+  position: absolute !important;
+  }
+
+#main {
+  margin-top: 62px;
+}
+
+  </style>
+  
+
+  
+ <!-- <script id="jupyter-config-data" type="application/json">
+            {
+                "allow_hidden_files": false,
+                "appName": "JupyterLab",
+                "appNamespace": "lab",
+                "appSettingsDir": "/opt/conda/share/jupyter/lab/settings",
+                "appUrl": "/lab",
+                "appVersion": "4.2.5",
+                "baseUrl": "/api/jupyter/",
+                "buildAvailable": true,
+                "buildCheck": true,
+                "cacheFiles": false,
+                "copyAbsolutePath": false,
+                "devMode": false,
+                "disabledExtensions": [
+                    "@jupyterlab/notebook-extension:language-server",
+                    "@jupyterlab/fileeditor-extension:language-server",
+                    "@jupyterlab/completer-extension:base-service",
+                    "@jupyterlab/lsp-extension:settings",
+                    "@jupyterlab/launcher-extension"
+                ],
+                "exposeAppInBrowser": false,
+                "extensionManager": {
+                    "can_install": false,
+                    "install_path": "/opt/conda",
+                    "name": "read-only"
+                },
+                "extraLabextensionsPath": [
+                ],
+                "federated_extensions": [
+                    {
+                        "entrypoints": null,
+                        "extension": "./extension",
+                        "load": "static/remoteEntry.aa1060b2d1221f8e5688.js",
+                        "name": "jupyterlab_pygments",
+                        "style": "./style"
+                    },
+                    {
+                        "entrypoints": null,
+                        "extension": "./extension",
+                        "load": "static/remoteEntry.5e9cf5db83490c7d4a35.js",
+                        "name": "nbdime-jupyterlab",
+                        "style": "./style"
+                    },
+                    {
+                        "entrypoints": null,
+                        "extension": "./extension",
+                        "load": "static/remoteEntry.e4ff09401a2f575928c0.js",
+                        "name": "@jupyter-widgets/jupyterlab-manager"
+                    },
+                    {
+                        "entrypoints": null,
+                        "extension": "./extension",
+                        "load": "static\\remoteEntry.f9bf636d670a28f75996.js",
+                        "name": "@amphi/pipeline-components-local",
+                        "style": "./style"
+                    },
+                    {
+                        "entrypoints": null,
+                        "extension": "./extension",
+                        "load": "static\\remoteEntry.3632121c71523a0444d1.js",
+                        "name": "@amphi/pipeline-editor",
+                        "style": "./style"
+                    },
+                    {
+                        "entrypoints": null,
+                        "extension": "./extension",
+                        "load": "static\\remoteEntry.9d7fff613ad053259de1.js",
+                        "name": "@amphi/pipeline-metadata-panel",
+                        "style": "./style"
+                    },
+                    {
+                        "entrypoints": null,
+                        "extension": "./extension",
+                        "load": "static\\remoteEntry.dd1f91c2ea4550209580.js",
+                        "name": "@amphi/pipeline-components-core",
+                        "style": "./style"
+                    },
+                    {
+                        "entrypoints": null,
+                        "extension": "./extension",
+                        "load": "static\\remoteEntry.fb5ce0805f5800241cc6.js",
+                        "name": "@amphi/pipeline-components-manager",
+                        "style": "./style"
+                    },
+                    {
+                        "entrypoints": null,
+                        "extension": "./extension",
+                        "load": "static\\remoteEntry.5e3eb8944a51f18a9355.js",
+                        "name": "@amphi/pipeline-log-console",
+                        "style": "./style"
+                    },
+                    {
+                        "entrypoints": null,
+                        "extension": "./extension",
+                        "load": "static/remoteEntry.c23488d97d201859645c.js",
+                        "name": "@jupyter-lsp/jupyterlab-lsp"
+                    },
+                    {
+                        "entrypoints": null,
+                        "extension": "./extension",
+                        "load": "static/remoteEntry.cc638776eeab74ee7b69.js",
+                        "name": "@jupyter-server/resource-usage",
+                        "style": "./style"
+                    },
+                    {
+                        "entrypoints": null,
+                        "extension": "./extension",
+                        "load": "static/remoteEntry.6edf1b79a9514de9c375.js",
+                        "name": "@jupyterlab/git",
+                        "style": "./style"
+                    },
+                    {
+                        "entrypoints": null,
+                        "load": "static/remoteEntry.9e8f0a9e615187056f59.js",
+                        "name": "@elyra/script-editor",
+                        "style": "./style"
+                    },
+                    {
+                        "entrypoints": null,
+                        "extension": "./extension",
+                        "load": "static/remoteEntry.0c80d07e756976320ee0.js",
+                        "name": "@elyra/script-debugger-extension",
+                        "style": "./style"
+                    },
+                    {
+                        "entrypoints": null,
+                        "extension": "./extension",
+                        "load": "static/remoteEntry.17fe53b286a2e1b7c47f.js",
+                        "name": "@elyra/code-snippet-extension",
+                        "style": "./style"
+                    },
+                    {
+                        "entrypoints": null,
+                        "load": "static/remoteEntry.806c3083e30ec41d7ddf.js",
+                        "name": "@elyra/metadata-common",
+                        "style": "./style"
+                    },
+                    {
+                        "entrypoints": null,
+                        "load": "static/remoteEntry.9a7ba9e17ae4887ae3fb.js",
+                        "name": "@elyra/ui-components",
+                        "style": "./style"
+                    },
+                    {
+                        "entrypoints": null,
+                        "extension": "./extension",
+                        "load": "static/remoteEntry.a10202f9f29aeaa1f700.js",
+                        "name": "@elyra/theme-extension",
+                        "style": "./style"
+                    },
+                    {
+                        "entrypoints": null,
+                        "extension": "./extension",
+                        "load": "static/remoteEntry.c959237b471b544e8f01.js",
+                        "name": "@elyra/pipeline-editor-extension",
+                        "style": "./style"
+                    },
+                    {
+                        "entrypoints": null,
+                        "extension": "./extension",
+                        "load": "static/remoteEntry.c53dacd835bb99dc010a.js",
+                        "name": "@elyra/scala-editor-extension",
+                        "style": "./style"
+                    },
+                    {
+                        "entrypoints": null,
+                        "extension": "./extension",
+                        "load": "static/remoteEntry.4a0436c682cc3b6405c3.js",
+                        "name": "@elyra/python-editor-extension",
+                        "style": "./style"
+                    },
+                    {
+                        "entrypoints": null,
+                        "extension": "./extension",
+                        "load": "static/remoteEntry.1bcadeb5df32f7ff0425.js",
+                        "name": "@elyra/metadata-extension",
+                        "style": "./style"
+                    },
+                    {
+                        "entrypoints": null,
+                        "load": "static/remoteEntry.bfea9f53bf59a9bea145.js",
+                        "name": "@elyra/services",
+                        "style": "./style"
+                    },
+                    {
+                        "entrypoints": null,
+                        "extension": "./extension",
+                        "load": "static/remoteEntry.d657e2406a9980aeaa72.js",
+                        "name": "@elyra/r-editor-extension",
+                        "style": "./style"
+                    }
+                ],
+                "fullAppUrl": "/api/jupyter/lab",
+                "fullLabextensionsUrl": "/api/jupyter/lab/extensions",
+                "fullLicensesUrl": "/api/jupyter/lab/api/licenses",
+                "fullListingsUrl": "/api/jupyter/lab/api/listings",
+                "fullMathjaxUrl": "/api/jupyter/static/nbclassic/components/MathJax/MathJax.js",
+                "fullSettingsUrl": "/api/jupyter/lab/api/settings",
+                "fullStaticUrl": "/api/jupyter/static/lab",
+                "fullThemesUrl": "/api/jupyter/lab/api/themes",
+                "fullTranslationsApiUrl": "/api/jupyter/lab/api/translations",
+                "fullTreeUrl": "/api/jupyter/lab/tree",
+                "fullWorkspacesApiUrl": "/api/jupyter/lab/api/workspaces",
+                "ignorePlugins": [
+                ],
+                "labextensionsPath": [
+                    "/root/.local/share/jupyter/labextensions",
+                    "/opt/conda/share/jupyter/labextensions",
+                    "/usr/local/share/jupyter/labextensions",
+                    "/usr/share/jupyter/labextensions"
+                ],
+                "labextensionsUrl": "/lab/extensions",
+                "licensesUrl": "/lab/api/licenses",
+                "listingsUrl": "/lab/api/listings",
+                "lockedExtensions": [
+                    "@jupyterlab/launcher-extension"
+                ],
+                "mathjaxConfig": "TeX-AMS-MML_HTMLorMML-full,Safe",
+                "mode": "multiple-document",
+                "news": {
+                    "disabled": false
+                },
+                "notebookStartsKernel": true,
+                "notebookVersion": "[2, 15, 0]",
+                "preferredPath": "/",
+                "quitButton": true,
+                "rootUri": "file:///home",
+                "schemasDir": "/opt/conda/share/jupyter/lab/schemas",
+                "serverRoot": "/home",
+                "settingsUrl": "/lab/api/settings",
+                "staticDir": "/opt/conda/share/jupyter/lab/static",
+                "store_id": 0,
+                "templatesDir": "/opt/conda/share/jupyter/lab/static",
+                "terminalsAvailable": true,
+                "themesDir": "/opt/conda/share/jupyter/lab/themes",
+                "themesUrl": "/lab/api/themes",
+                "token": "7f5aef3e75326ed6da5963100057fe9665d398be40a668b0",
+                "translationsApiUrl": "/lab/api/translations",
+                "treePath": "",
+                "treeUrl": "/lab/tree",
+                "userSettingsDir": "/root/.jupyter/lab/user-settings",
+                "virtualDocumentsUri": "file:///home/.virtual_documents",
+                "workspace": "default",
+                "workspacesApiUrl": "/lab/api/workspaces",
+                "workspacesDir": "/root/.jupyter/lab/workspaces",
+                "wsUrl": "ws://localhost:8899/api/jupyter"
+            }</script> -->
+       
+       
+        
+        
+        
+
+
+
+
+    
+    <link rel="icon" type="image/x-icon" href="/static/favicons/favicon.ico" class="idle favicon">
+    <link rel="" type="image/x-icon" href="/static/favicons/favicon-busy-1.ico" class="busy favicon">
+    
+
+    <script>
+
+      function loadJupyterResources() {
+        return new Promise((resolve, reject) => {
+                 
+         
+          // const script = document.createElement('script');
+          // script.defer = true;
+          // script.src = '/api/jupyter/static/lab/main.d1d45e5c16d8a46ddf5e.js?v=d1d45e5c16d8a46ddf5e';
+          // script.onload = resolve;
+          // script.onerror = reject;
+          // document.head.appendChild(script);
+        });
+      }
+      
+      // Function to unload Jupyter resources
+      function unloadJupyterResources() {
+        const configScript = document.getElementById('jupyter-config-data');
+        if (configScript) {
+          configScript.remove();
+        }
+        
+        const scripts = document.querySelectorAll('script[src*="/static/lab/main."]');
+        scripts.forEach(script => script.remove());
+      }
+    </script>
+
+
+</head>
+<body style="margin-top: 0; margin-left: 0; margin-right: 0;font-family: system-ui !important; ">
+ 
+
+  <script src="https://cdn.jsdelivr.net/npm/zone.js@0.10.3/dist/zone.min.js"></script>
+
+  <div id="react-app"></div>
+
+    <div id="react-ssr"></div>
+    <div id="angular-app"></div>
+    <script src="/dist/common-dependencies.js"></script>
+    <script src="/dist/root-application.js"></script>
+
+    
+  <div id="react-login"></div>
+  <div id="react-register"></div>
+  <div id="react-jupyter"></div>
+  <div id="react-report"></div>
+  <div id="react-workbench"></div>
+  <div id="react-nxtcd" ></div>
+  <div id="react-feast"></div>
+  <div id="react-metabase"></div>
+  <div id="react-nifi"></div>
+
+  <script>
+    /* Remove token from URL. */
+    (function() {
+        var location = window.location;
+        var search = location.search;
+
+        // If there is no query string, bail.
+        if (search.length <= 1) {
+            return;
+        }
+
+        // Rebuild the query string without the `token`.
+        var query = '?' + search.slice(1).split('&').filter(function(param) {
+            return param.split('=')[0] !== 'token';
+        }).join('&');
+
+        // Rebuild the URL with the new query string.
+        var url = location.origin + location.pathname + (query !== '?' ? query : '') + location.hash;
+
+        if (url === location.href) {
+            return;
+        }
+
+        window.history.replaceState({}, '', url);
+    }
+    )();
+</script>
+</body>
+</html>

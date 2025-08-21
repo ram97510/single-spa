@@ -1,0 +1,96 @@
+/* styles.css */
+
+.full {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    
+  }
+  
+  .login-container {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 400px;
+  }
+  
+  .login-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .input {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .btn-submit {
+    width: 30%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .btn-submit:hover {
+    background-color: #0056b3;
+  }
+  
+  .login-logopage{
+    margin-top: 50px;
+    margin-left: 0;
+    /* margin-top: -85px; */
+  }
+  .login_logopage_img{
+    height: 40px;
+    
+  }
+  /* Optional: Add media queries for responsiveness */
+  /* @media (max-width: 768px) {
+    .login-container {
+      width: 80%;
+    }
+  }
+   */
+
+   .openid-full{
+    margin-left: 43%;
+    
+   }
+
+   .openid-btn{
+    width: 130px;
+    height: 30px;
+    border-radius: 4px;
+    border: solid rgb(255, 255, 255) 0px ;
+   }
+
+   #openid-twitter{
+    background-color: #16bdff;
+    color: white;
+
+   }
+   #openid-github{
+    background-color: #505050;
+    color: white;
+   }
+   #openid-google{
+    background-color: #ffffff;
+    border: solid rgb(0, 0, 0) 1px ;
+   }
+
+
+   .google-btn{
+    width: 100px !important;
+   }
+
+   
